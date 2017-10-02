@@ -26,7 +26,7 @@ def main_route():
         g = len(v["businesses"])
         if g == 0:
             found = False
-            error = "I am sorry. There aren't any Gender Neutral Restrooms in your area that we know of"
+            error = "I am sorry. We don't know of any Gender Neutral Restrooms in your area. Please try again or contact us at vivianphung@outlook.com to add locations"
             return render_template("index.html", error = error)
         elif g == 6: 
             found = True
