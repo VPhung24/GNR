@@ -86,6 +86,7 @@ print(v)
 g = len(v["businesses"])
 print(g)
 for i in range(0, len(6)):
+    restroom=[]
     restroom[i] = v["businesses"][0]["name"]
     restroom_url[i] + str(i) = v["businesses"][0]["url"]
     restroom_image[i] = v["businesses"][0]["image_url"]
