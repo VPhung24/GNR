@@ -105,4 +105,3 @@ def main():
                 error.read(),
             )
         )
-main()
