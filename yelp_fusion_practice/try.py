@@ -26,7 +26,7 @@ GRANT_TYPE = 'client_credentials'
 
 DEFAULT_TERM = 'dinner'
 DEFAULT_LOCATION = 'San Francisco, CA'
-SEARCH_LIMIT = 1
+SEARCH_LIMIT = 6
 
 
 def obtain_bearer_token(host, path):
@@ -81,9 +81,10 @@ def query_api(term, location):
     response = search(bearer_token, term, location)
     
     return response
-
-print(query_api("sushi", "94545"))
-
+v = query_api("sushi", "94545")
+print(v)
+g = len(v["businesses"])
+print(g)
 def main():
     parser = argparse.ArgumentParser()
 
