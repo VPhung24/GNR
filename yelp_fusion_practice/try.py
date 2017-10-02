@@ -120,6 +120,6 @@ v = query_api("sushi", 94545)
 g = len(v["businesses"])
 print(g)
 v = v["businesses"]
-a = v[i]["name"]
+a = v[0]["name"]
 print(a)
 
