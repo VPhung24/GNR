@@ -81,7 +81,7 @@ def query_api(term, location):
     response = search(bearer_token, term, location)
     
     return response
-v = query_api("sushi", "94545")
+v = query_api("sushi", "94501")
 print(v)
 g = len(v["businesses"])
 print(g)
@@ -95,15 +95,15 @@ restroom_city = []
 restroom_zipcode = []
 restroom_state = []
 for i in range(0, g):
-    restroom[i] = v["businesses"][0]["name"]
-    restroom_url[i] = v["businesses"][0]["url"]
-    restroom_image[i] = v["businesses"][0]["image_url"]
-    restroom_review[i] = v["businesses"][0]["review_count"]
-    restroom_rating[i] = v["businesses"][0]["rating"]
-    restroom_address[i] = v["businesses"][0]["location"]["address1"]
-    restroom_city[i] = v["businesses"][0]["location"]["city"]
-    restroom_zipcode[i] = v["businesses"][0]["location"]["zip_code"]
-    restroom_state[i] = v["businesses"][0]["location"]["state"]
+    restroom[i] = v["businesses"][i]["name"]
+    restroom_url[i] = v["businesses"][i]["url"]
+    restroom_image[i] = v["businesses"][i]["image_url"]
+    restroom_review[i] = v["businesses"][i]["review_count"]
+    restroom_rating[i] = v["businesses"][i]["rating"]
+    restroom_address[i] = v["businesses"][i]["location"]["address1"]
+    restroom_city[i] = v["businesses"][i]["location"]["city"]
+    restroom_zipcode[i] = v["businesses"][i]["location"]["zip_code"]
+    restroom_state[i] = v["businesses"][i]["location"]["state"]
     print(restroom[i])
 
 def main():
