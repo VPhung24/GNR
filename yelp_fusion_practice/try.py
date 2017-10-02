@@ -94,7 +94,7 @@ restroom_address = []
 restroom_city = []
 restroom_zipcode = []
 restroom_state = []
-for i in range(0, g):
+for i in range(0, g - 1):
     restroom[i] = v["businesses"][i]["name"]
     restroom_url[i] = v["businesses"][i]["url"]
     restroom_image[i] = v["businesses"][i]["image_url"]
