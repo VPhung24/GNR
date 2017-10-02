@@ -96,7 +96,7 @@ restroom_zipcode = []
 restroom_state = []
 for i in range(0, len(6)):
     restroom[i] = v["businesses"][0]["name"]
-    restroom_url[i] + str(i) = v["businesses"][0]["url"]
+    restroom_url[i] = v["businesses"][0]["url"]
     restroom_image[i] = v["businesses"][0]["image_url"]
     restroom_review[i] = v["businesses"][0]["review_count"]
     restroom_rating[i] = v["businesses"][0]["rating"]
