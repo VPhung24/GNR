@@ -38,9 +38,9 @@ def obtain_bearer_token(host, path):
                      'client_secret': CLIENT_SECRET,
                      'grant_type': GRANT_TYPE,
                      })
-                     headers = {
-                         'content-type': 'application/x-www-form-urlencoded',
-                     }
+    headers = {
+                'content-type': 'application/x-www-form-urlencoded',
+                }
 
 response = requests.request('POST', url, data=data, headers=headers)
 
