@@ -81,6 +81,7 @@ def query_api(term, location):
     response = search(bearer_token, term, location)
     
     return response
+
 v = query_api("sushi", "94501")
 restroom = []
 restroom_url = []
