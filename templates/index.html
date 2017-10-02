@@ -148,7 +148,7 @@
   {% endif %}
 </div>
   <br> </br>
-
+{{ if not three_or less }}
 <div class="card-group">
   {% if restroom_true3 %}
   <div class="card bg-transparent">
@@ -217,6 +217,7 @@
   </div>
     {% endif %}
 </div>
+{% endif %}
 {% endif %}
   <style>
     resize {
