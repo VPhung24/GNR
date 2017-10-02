@@ -34,15 +34,18 @@ def obtain_bearer_token(host, path):
     assert CLIENT_ID, "zBGkYQVe0aicViSmzj9SPg"
     assert CLIENT_SECRET, "bADttn0PFCMqiqgICFLOTz1WzUMyGXsBwnzjE0gd4vm1nUrpyMovpDCBR9bWja3z"
     data = urlencode({
-        'client_id': CLIENT_ID,
-        'client_secret': CLIENT_SECRET,
-        'grant_type': GRANT_TYPE,
-    })
-    headers = {
-        'content-type': 'application/x-www-form-urlencoded',
-    }
-    response = requests.request('POST', url, data=data, headers=headers)
-    bearer_token = response.json()['access_token']
+                     'client_id': CLIENT_ID,
+                     'client_secret': CLIENT_SECRET,
+                     'grant_type': GRANT_TYPE,
+                     })
+                     headers = {
+                         'content-type': 'application/x-www-form-urlencoded',
+                     }
+
+response = requests.request('POST', url, data=data, headers=headers)
+
+bearer_token = response.json()['access_token']
+    
     return bearer_token
 
 
@@ -52,12 +55,12 @@ def request(host, path, bearer_token, url_params=None):
     headers = {
         'Authorization': 'Bearer %s' % bearer_token,
     }
-
+    
     print(u'Querying {0} ...'.format(url))
 
-    response = requests.request('GET', url, headers=headers, params=url_params)
+response = requests.request('GET', url, headers=headers, params=url_params)
 
-    return response.json()
+return response.json()
 
 
 def search(bearer_token, term, location):
@@ -66,7 +69,7 @@ def search(bearer_token, term, location):
         'location': location.replace(' ', '+'),
         'limit': SEARCH_LIMIT,
         'attributes': "gender_neutral_restrooms"
-
+    
     }
     return request(API_HOST, SEARCH_PATH, bearer_token, url_params=url_params)
 
@@ -75,14 +78,33 @@ def get_business(bearer_token, business_id):
     return request(API_HOST, business_path, bearer_token)
 
 def query_api(term, location):
-
+    
     bearer_token = obtain_bearer_token(API_HOST, TOKEN_PATH)
-
+    
     response = search(bearer_token, term, location)
     
     return response
 
-v = query_api("sushi", "94501")
+def main():
+    parser = argparse.ArgumentParser()
+    
+    parser.add_argument('-q', '--term', dest='term', default=DEFAULT_TERM,
+                        type=str, help='Search term (default: %(default)s)')
+                        parser.add_argument('-l', '--location', dest='location',
+                                            default=DEFAULT_LOCATION, type=str,
+                                            help='Search location (default: %(default)s)')
+                        input_values = parser.parse_args()
+                        
+                        try:
+                            query_api(input_values.term, input_values.location)
+                        except HTTPError as error:
+                            sys.exit(
+                                     'Encountered HTTP error {0} on {1}:\n {2}\nAbort program.'.format(
+                                                                                                       error.code,
+                                                                                                       error.url,
+                                                                                                       error.read(),
+                                                                                                       )
+                                     )
 restroom = []
 restroom_url = []
 restroom_image = []
@@ -92,62 +114,11 @@ restroom_address = []
 restroom_city = []
 restroom_zipcode = []
 restroom_state = []
+restroom_true = []
+v = query_api(sushi, 59008)
 g = len(v["businesses"])
-if g == 0:
-    return render_template("index.html", error = error)
-elif g == 6:
-    for i in range(0, g):
-        restroom.append(v["businesses"][i]["name"])
-        restroom_url.append(v["businesses"][i]["url"])
-        restroom_image.append(v["businesses"][i]["image_url"])
-        restroom_review.append(v["businesses"][i]["review_count"])
-        restroom_rating.append(v["businesses"][i]["rating"])
-        restroom_address.append(v["businesses"][i]["location"]["address1"])
-        restroom_city.append(v["businesses"][i]["location"]["city"])
-        restroom_zipcode.append(v["businesses"][i]["location"]["zip_code"])
-        restroom_state.append(v["businesses"][i]["location"]["state"])
-    return render_template("index.html", .....)    
-else: 
-    for i in range(0, g):
-        restroom.append(v["businesses"][i]["name"])
-        restroom_url.append(v["businesses"][i]["url"])
-        restroom_image.append(v["businesses"][i]["image_url"])
-        restroom_review.append(v["businesses"][i]["review_count"])
-        restroom_rating.append(v["businesses"][i]["rating"])
-        restroom_address.append(v["businesses"][i]["location"]["address1"])
-        restroom_city.append(v["businesses"][i]["location"]["city"])
-        restroom_zipcode.append(v["businesses"][i]["location"]["zip_code"])
-        restroom_state.append(v["businesses"][i]["location"]["state"])
-    z = 6 - g
-    for t in range(0, z):
-        restroom.append(0)
-        restroom_url.append(0)
-        restroom_image.append(0)
-        restroom_review.append(0)
-        restroom_rating.append(0)
-        restroom_address.append(0)
-        restroom_city.append(0)
-        restroom_zipcode.append(0)
-        restroom_state.append(0)
-    return render_template("index.html", ...)
+print(g)
+v = v["businesses"]
+a = v[i]["name"]
+print(a)
 
-def main():
-    parser = argparse.ArgumentParser()
-
-    parser.add_argument('-q', '--term', dest='term', default=DEFAULT_TERM,
-                        type=str, help='Search term (default: %(default)s)')
-    parser.add_argument('-l', '--location', dest='location',
-                        default=DEFAULT_LOCATION, type=str,
-                        help='Search location (default: %(default)s)')
-    input_values = parser.parse_args()
-
-    try:
-        query_api(input_values.term, input_values.location)
-    except HTTPError as error:
-        sys.exit(
-            'Encountered HTTP error {0} on {1}:\n {2}\nAbort program.'.format(
-                error.code,
-                error.url,
-                error.read(),
-            )
-        )

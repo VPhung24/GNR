@@ -36,7 +36,7 @@ def main_route():
             return render_template("index.html", error = error, found = found)
         elif g == 0:
             found = False
-            error = "Sorry! We don't know of any Gender Neutral Restrooms in your area in the type you specified. Please try again!"
+            error = "Sorry! We don't know of any Gender Neutral Restrooms in your area of the type you specified. Please try again!"
             return render_template("index.html", error = error, found = found)
         elif g == 6: 
             found = True
