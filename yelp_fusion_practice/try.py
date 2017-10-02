@@ -106,7 +106,6 @@ def main():
             )
         )
 
-                                     )
 restroom = []
 restroom_url = []
 restroom_image = []
