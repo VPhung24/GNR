@@ -129,7 +129,7 @@ else:
         restroom_city.append(0)
         restroom_zipcode.append(0)
         restroom_state.append(0)
-    return render_template("index.html", error = error)
+    return render_template("index.html", ...)
 
 def main():
     parser = argparse.ArgumentParser()
