@@ -116,6 +116,14 @@
       </div>
   </div>
   {% endif %}
+  {% if not restroom_true1 %}
+       <div class="card bg-transparent">
+    <div class="card-body bg-transparent">
+    </div>
+    <div class="card-footer bg-transparent">
+    </div>
+  </div>
+  {% endif %}
   {% if restroom_true2 %}
   <div class="card bg-transparent">
     <a href="{{ restroom_url2 }}">
@@ -128,6 +136,14 @@
       <div class="card-footer bg-transparent">
         <small class="text-bold" style="bold">{{ restroom_rating2 }} | Rated by {{ restroom_review2 }}</small>
       </div>
+  </div>
+  {% endif %}
+  {% if not restroom_true2 %}
+       <div class="card bg-transparent">
+    <div class="card-body bg-transparent">
+    </div>
+    <div class="card-footer bg-transparent">
+    </div>
   </div>
   {% endif %}
 </div>
@@ -148,6 +164,14 @@
     </div>
   </div>
     {% endif %}
+    {% if not restroom_true3 %}
+       <div class="card bg-transparent">
+    <div class="card-body bg-transparent">
+    </div>
+    <div class="card-footer bg-transparent">
+    </div>
+  </div>
+    {% endif %}
     {% if restroom_true4 %}
   <div class="card bg-transparent">
     <a href="{{ restroom_url4 }}" >
@@ -159,6 +183,14 @@
     </div>
     <div class="card-footer bg-transparent">
       <small class="text-bold">{{ restroom_rating4 }} | Rated by {{ restroom_review4 }}</small>
+    </div>
+  </div>
+    {% endif %}
+    {% if not restroom_true4 %}
+       <div class="card bg-transparent">
+    <div class="card-body bg-transparent">
+    </div>
+    <div class="card-footer bg-transparent">
     </div>
   </div>
     {% endif %}
