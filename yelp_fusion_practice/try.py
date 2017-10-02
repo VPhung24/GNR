@@ -82,9 +82,6 @@ def query_api(term, location):
     
     return response
 v = query_api("sushi", "94501")
-print(v)
-g = len(v["businesses"])
-print(g)
 restroom = []
 restroom_url = []
 restroom_image = []
@@ -94,7 +91,7 @@ restroom_address = []
 restroom_city = []
 restroom_zipcode = []
 restroom_state = []
-for i in range(0, g):
+for i in range(0, len(v["businesses"])):
     restroom.append(v["businesses"][i]["name"])
     restroom_url.append(v["businesses"][i]["url"])
     restroom_image.append(v["businesses"][i]["image_url"])
