@@ -46,7 +46,7 @@ response = requests.request('POST', url, data=data, headers=headers)
 
 bearer_token = response.json()['access_token']
     
-    return bearer_token
+return bearer_token
 
 
 def request(host, path, bearer_token, url_params=None):
