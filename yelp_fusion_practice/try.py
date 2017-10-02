@@ -95,16 +95,16 @@ restroom_city = []
 restroom_zipcode = []
 restroom_state = []
 for i in range(0, g - 1):
-    restroom[i] = v["businesses"][i]["name"]
-    restroom_url[i] = v["businesses"][i]["url"]
-    restroom_image[i] = v["businesses"][i]["image_url"]
-    restroom_review[i] = v["businesses"][i]["review_count"]
-    restroom_rating[i] = v["businesses"][i]["rating"]
-    restroom_address[i] = v["businesses"][i]["location"]["address1"]
-    restroom_city[i] = v["businesses"][i]["location"]["city"]
-    restroom_zipcode[i] = v["businesses"][i]["location"]["zip_code"]
-    restroom_state[i] = v["businesses"][i]["location"]["state"]
-    print(restroom[i])
+    restroom.append(i) = v["businesses"][i]["name"]
+    restroom_url.append(i) = v["businesses"][i]["url"]
+    restroom_image.append(i) = v["businesses"][i]["image_url"]
+    restroom_review.append(i) = v["businesses"][i]["review_count"]
+    restroom_rating.append(i) = v["businesses"][i]["rating"]
+    restroom_address.append(i) = v["businesses"][i]["location"]["address1"]
+    restroom_city.append(i) = v["businesses"][i]["location"]["city"]
+    restroom_zipcode.append(i) = v["businesses"][i]["location"]["zip_code"]
+    restroom_state.append(i) = v["businesses"][i]["location"]["state"]
+    print(restroom)
 
 def main():
     parser = argparse.ArgumentParser()
