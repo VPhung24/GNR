@@ -26,7 +26,7 @@ def main_route():
         g = len(v["businesses"])
         if g == 0:
             found = False
-            error = "I am sorry. We don't know of any Gender Neutral Restrooms in your area in the type you specified. Please try again"
+            error = "Sorry! We don't know of any Gender Neutral Restrooms in your area in the type you specified. Please try again."
             return render_template("index.html", error = error)
         elif g == 6: 
             found = True
@@ -54,6 +54,8 @@ def main_route():
                 restroom_city.append(v["businesses"][i]["location"]["city"])
                 restroom_zipcode.append(v["businesses"][i]["location"]["zip_code"])
                 restroom_state.append(v["businesses"][i]["location"]["state"])
+            # maybe something like restroom1 = True, restroom2 = True, restroom3 = False.. 
+            # based on z we could do a for i in range and that would check and if they werent there then it wouldn't show up
             for t in range(0, z):
                 restroom.append(0)
                 restroom_url.append(0)
