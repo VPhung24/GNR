@@ -78,7 +78,7 @@ def main_route():
     found = False
     return render_template("index.html", found = found)
 
-app.secret_key = 'vivian and serina is cool'
+app.secret_key = 'GNR for life'
 
 @app.errorhandler(404)
 def page_not_found(e):
