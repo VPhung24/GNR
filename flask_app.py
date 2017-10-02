@@ -29,7 +29,11 @@ def main_route():
         if g == 0:
             found = False
             error = "Sorry! We don't know of any Gender Neutral Restrooms in your area in the type you specified. Please try again!"
-            return render_template("index.html", error = error)
+            return render_template("index.html", error = error, found = found)
+        elif (len(location_user) <= 3) or (len(type_user) <= 3):
+            found = False
+            error = "Sorry! Please input more characters"
+            return render_template("index.html", error = error, found = found)
         elif g == 6: 
             found = True
             three_or_less = False
