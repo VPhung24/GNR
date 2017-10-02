@@ -85,6 +85,17 @@ v = query_api("sushi", "94545")
 print(v)
 g = len(v["businesses"])
 print(g)
+for i in range(0, len(6)):
+    restroom[i] = v["businesses"][0]["name"]
+    restroom_url[i] + str(i) = v["businesses"][0]["url"]
+    restroom_image[i] = v["businesses"][0]["image_url"]
+    restroom_review[i] = v["businesses"][0]["review_count"]
+    restroom_rating[i] = v["businesses"][0]["rating"]
+    restroom_address[i] = v["businesses"][0]["location"]["address1"]
+    restroom_city[i] = v["businesses"][0]["location"]["city"]
+    restroom_zipcode[i] = v["businesses"][0]["location"]["zip_code"]
+    restroom_state[i] = v["businesses"][0]["location"]["state"]
+    print(restroom[i])
 def main():
     parser = argparse.ArgumentParser()
 
