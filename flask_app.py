@@ -58,7 +58,7 @@ def main_route():
             found = True
             three_or_less = False
             z = 6 - g # if g = 1, z = 5; g = 2, z = 4
-            for i in range(0, g - 1):
+            for i in range(0, g):
                 restroom.append(v[i]["name"])
                 restroom_url.append(v[i]["url"])
                 restroom_image.append(v[i]["image_url"])
