@@ -26,7 +26,6 @@ def main_route():
         error = " "
         g = len(v["businesses"])
         v = v["businesses"]
-        three_or_less = False
         g = 3
         if g == 0:
             found = False
@@ -35,6 +34,7 @@ def main_route():
         elif g == 6: 
             found = False
             for i in range(0, g):
+                three_or_less = False
                 restroom.append(v[i]["name"])
                 restroom_url.append(v[i]["url"])
                 restroom_image.append(v[i]["image_url"]) 
