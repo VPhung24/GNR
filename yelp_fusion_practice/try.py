@@ -94,17 +94,17 @@ restroom_address = []
 restroom_city = []
 restroom_zipcode = []
 restroom_state = []
-for i in range(0, g - 1):
-    restroom_name = v["businesses"][i]["name"]
-    restroom_url = v["businesses"][i]["url"]
-    restroom_image = v["businesses"][i]["image_url"]
-    restroom_review = v["businesses"][i]["review_count"]
-    restroom_rating = v["businesses"][i]["rating"]
-    restroom_address = v["businesses"][i]["location"]["address1"]
-    restroom_city = v["businesses"][i]["location"]["city"]
-    restroom_zipcode = v["businesses"][i]["location"]["zip_code"]
-    restroom_state = v["businesses"][i]["location"]["state"]
-    restroom.append(restroom_name)
+for i in range(0, g):
+    restroom.append(v["businesses"][i]["name"])
+    restroom_url.append(v["businesses"][i]["url"])
+    restroom_image.append(v["businesses"][i]["image_url"])
+    restroom_review.append(v["businesses"][i]["review_count"])
+    restroom_rating.append(v["businesses"][i]["rating"])
+    restroom_address.append(v["businesses"][i]["location"]["address1"])
+    restroom_city.append(v["businesses"][i]["location"]["city"])
+    restroom_zipcode.append(v["businesses"][i]["location"]["zip_code"])
+    restroom_state.append(v["businesses"][i]["location"]["state"])
+
 print(restroom)
 
 def main():
