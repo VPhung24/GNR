@@ -85,8 +85,16 @@ v = query_api("sushi", "94545")
 print(v)
 g = len(v["businesses"])
 print(g)
+restroom = []
+restroom_url = []
+restroom_image = []
+restroom_review = []
+restroom_rating = []
+restroom_address = []
+restroom_city = []
+restroom_zipcode = []
+restroom_state = []
 for i in range(0, len(6)):
-    restroom=[]
     restroom[i] = v["businesses"][0]["name"]
     restroom_url[i] + str(i) = v["businesses"][0]["url"]
     restroom_image[i] = v["businesses"][0]["image_url"]
