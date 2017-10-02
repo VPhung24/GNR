@@ -26,7 +26,7 @@ def main_route():
         error = " "
         g = len(v["businesses"])
         v = v["businesses"]
-        g = 1
+        g = 2
         if (not len(location_user) == 5):
             found = False
             error = "Sorry! Please input a zipcode."
@@ -57,7 +57,7 @@ def main_route():
         else: 
             found = True
             three_or_less = False
-            z = 6 - g # if g = 1, z = 5; g = 2, z = 4
+            z = 6 - g
             for i in range(0, g):
                 restroom.append(v[i]["name"])
                 restroom_url.append(v[i]["url"])
