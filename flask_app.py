@@ -70,7 +70,7 @@ def main_route():
                 restroom_true.append(True)
             # maybe something like restroom1 = True, restroom2 = True, restroom3 = False.. 
             # based on z we could do a for i in range and that would check and if they werent there then it wouldn't show up
-            for v in range(0, z - 1):
+            for v in range(0, z):
                 restroom.append("name")
                 restroom_url.append("url")
                 restroom_image.append("image_url")
