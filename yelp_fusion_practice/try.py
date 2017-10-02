@@ -92,18 +92,44 @@ restroom_address = []
 restroom_city = []
 restroom_zipcode = []
 restroom_state = []
-for i in range(0, len(v["businesses"])):
-    restroom.append(v["businesses"][i]["name"])
-    restroom_url.append(v["businesses"][i]["url"])
-    restroom_image.append(v["businesses"][i]["image_url"])
-    restroom_review.append(v["businesses"][i]["review_count"])
-    restroom_rating.append(v["businesses"][i]["rating"])
-    restroom_address.append(v["businesses"][i]["location"]["address1"])
-    restroom_city.append(v["businesses"][i]["location"]["city"])
-    restroom_zipcode.append(v["businesses"][i]["location"]["zip_code"])
-    restroom_state.append(v["businesses"][i]["location"]["state"])
-
-print(restroom)
+g = len(v["businesses"])
+if g == 0:
+    return render_template("index.html", error = error)
+elif g == 6:
+    for i in range(0, g):
+        restroom.append(v["businesses"][i]["name"])
+        restroom_url.append(v["businesses"][i]["url"])
+        restroom_image.append(v["businesses"][i]["image_url"])
+        restroom_review.append(v["businesses"][i]["review_count"])
+        restroom_rating.append(v["businesses"][i]["rating"])
+        restroom_address.append(v["businesses"][i]["location"]["address1"])
+        restroom_city.append(v["businesses"][i]["location"]["city"])
+        restroom_zipcode.append(v["businesses"][i]["location"]["zip_code"])
+        restroom_state.append(v["businesses"][i]["location"]["state"])
+    return render_template("index.html", .....)    
+else: 
+    for i in range(0, g):
+        restroom.append(v["businesses"][i]["name"])
+        restroom_url.append(v["businesses"][i]["url"])
+        restroom_image.append(v["businesses"][i]["image_url"])
+        restroom_review.append(v["businesses"][i]["review_count"])
+        restroom_rating.append(v["businesses"][i]["rating"])
+        restroom_address.append(v["businesses"][i]["location"]["address1"])
+        restroom_city.append(v["businesses"][i]["location"]["city"])
+        restroom_zipcode.append(v["businesses"][i]["location"]["zip_code"])
+        restroom_state.append(v["businesses"][i]["location"]["state"])
+    z = 6 - g
+    for t in range(0, z)
+        restroom.append(0)
+        restroom_url.append(0)
+        restroom_image.append(0)
+        restroom_review.append(0)
+        restroom_rating.append(0)
+        restroom_address.append(0)
+        restroom_city.append(0)
+        restroom_zipcode.append(0)
+        restroom_state.append(0)
+    return render_template("index.html", error = error)
 
 def main():
     parser = argparse.ArgumentParser()
