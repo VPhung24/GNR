@@ -104,7 +104,7 @@ for i in range(0, g - 1):
     restroom_city = v["businesses"][i]["location"]["city"]
     restroom_zipcode = v["businesses"][i]["location"]["zip_code"]
     restroom_state = v["businesses"][i]["location"]["state"]
-    restroom.append = restroom
+    restroom.append(restroom)
     print(restroom)
 
 def main():
