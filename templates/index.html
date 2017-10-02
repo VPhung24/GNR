@@ -102,6 +102,7 @@
         <small class="text-bold">{{ restroom_rating0 }} | Rated by {{ restroom_review0 }}</small>
       </div>
   </div>
+  {% if restroom_true1 %}
     <div class="card bg-transparent">
     <a href="{{ restroom_url1 }}">
       <img class="card-img-top" src="{{ restroom_image1 }}"/>
@@ -114,6 +115,8 @@
         <small class="text-bold" style="bold">{{ restroom_rating1 }} | Rated by {{ restroom_review1 }}</small>
       </div>
   </div>
+  {% endif %}
+  {% if restroom_true2 %}
   <div class="card bg-transparent">
     <a href="{{ restroom_url2 }}">
       <img class="card-img-top" src="{{ restroom_image2 }}"/>
@@ -126,10 +129,12 @@
         <small class="text-bold" style="bold">{{ restroom_rating2 }} | Rated by {{ restroom_review2 }}</small>
       </div>
   </div>
+  {% endif %}
 </div>
   <br> </br>
 
 <div class="card-group">
+  {% if restroom_true3 %}
   <div class="card bg-transparent">
     <a href="{{ restroom_url3 }}">
     <img class="card-img-top" src="{{ restroom_image3 }}"/>
@@ -142,6 +147,8 @@
       <small class="text-bold"> {{ restroom_rating3 }} | Rated by {{ restroom_review3 }}</small>
     </div>
   </div>
+    {% endif %}
+    {% if restroom_true4 %}
   <div class="card bg-transparent">
     <a href="{{ restroom_url4 }}" >
       <img class="card-img-top" src="{{ restroom_image4 }}"/>
@@ -154,6 +161,8 @@
       <small class="text-bold">{{ restroom_rating4 }} | Rated by {{ restroom_review4 }}</small>
     </div>
   </div>
+    {% endif %}
+    {% if restroom_true5 %}
   <div class="card bg-transparent">
     <a href="{{ restroom_url5 }}">
     <img class="card-img-top" src="{{ restroom_image5 }}"/>
@@ -166,6 +175,7 @@
       <small class="text-bold"> {{ restroom_rating5 }} | Rated by {{ restroom_review5 }}</small>
     </div>
   </div>
+    {% endif %}
 </div>
 {% endif %}
   <style>
