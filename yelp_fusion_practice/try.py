@@ -96,6 +96,7 @@ for i in range(0, len(6)):
     restroom_zipcode[i] = v["businesses"][0]["location"]["zip_code"]
     restroom_state[i] = v["businesses"][0]["location"]["state"]
     print(restroom[i])
+
 def main():
     parser = argparse.ArgumentParser()
 
