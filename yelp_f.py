@@ -41,8 +41,11 @@ def obtain_bearer_token(host, path):
     headers = {
         'content-type': 'application/x-www-form-urlencoded',
     }
+    
     response = requests.request('POST', url, data=data, headers=headers)
+    
     bearer_token = response.json()['access_token']
+    
     return bearer_token
 
 
