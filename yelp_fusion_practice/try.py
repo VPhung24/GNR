@@ -86,8 +86,8 @@ def query_api(term, location):
     return response
 
 def main():
-    parser = argparse.ArgumentParser()
-    parser.add_argument('-q', '--term', dest='term', default=DEFAULT_TERM,
+parser = argparse.ArgumentParser()
+parser.add_argument('-q', '--term', dest='term', default=DEFAULT_TERM,
                         type=str, help='Search term (default: %(default)s)')
                         parser.add_argument('-l', '--location', dest='location',
                                             default=DEFAULT_LOCATION, type=str,
