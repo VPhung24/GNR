@@ -26,9 +26,13 @@ def main_route():
         error = " "
         g = len(v["businesses"])
         v = v["businesses"]
-        if (len(location_user) <= 3) or (len(type_user) <= 3):
+        if (not len(location_user) == 5):
             found = False
-            error = "Sorry! Please input more characters"
+            error = "Sorry! Please input a zipcode."
+            return render_template("index.html", error = error, found = found)
+        elif (len(type_user) <= 3):
+            found = False
+            error = "Sorry! Please input more characters for Type of Establishment."
             return render_template("index.html", error = error, found = found)
         elif g == 0:
             found = False
