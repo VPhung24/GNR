@@ -119,7 +119,7 @@ else:
         restroom_zipcode.append(v["businesses"][i]["location"]["zip_code"])
         restroom_state.append(v["businesses"][i]["location"]["state"])
     z = 6 - g
-    for t in range(0, z)
+    for t in range(0, z):
         restroom.append(0)
         restroom_url.append(0)
         restroom_image.append(0)
