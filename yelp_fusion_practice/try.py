@@ -104,7 +104,7 @@ for i in range(0, g - 1):
     restroom_city.append(i) = v["businesses"][i]["location"]["city"]
     restroom_zipcode.append(i) = v["businesses"][i]["location"]["zip_code"]
     restroom_state.append(i) = v["businesses"][i]["location"]["state"]
-    print(restroom)
+print(restroom)
 
 def main():
     parser = argparse.ArgumentParser()
