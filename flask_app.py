@@ -26,14 +26,14 @@ def main_route():
         g = len(v["businesses"])
         if g == 0:
             found = False
-            error = "I am sorry. We don't know of any Gender Neutral Restrooms in your area. Please try again or contact us at vivianphung@outlook.com to add locations"
+            error = "I am sorry. We don't know of any Gender Neutral Restrooms in your area in the type you specified. Please try again"
             return render_template("index.html", error = error)
         elif g == 6: 
             found = True
             for i in range(0, g):
                 restroom.append(v["businesses"][i]["name"])
                 restroom_url.append(v["businesses"][i]["url"])
-                restroom_image.append(v["businesses"][i]["image_url"])
+                restroom_image.append(v["businesses"][i]["image_url"]) 
                 restroom_review.append(v["businesses"][i]["review_count"])
                 restroom_rating.append(v["businesses"][i]["rating"])
                 restroom_address.append(v["businesses"][i]["location"]["address1"])
