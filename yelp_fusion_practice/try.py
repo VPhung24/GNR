@@ -82,6 +82,8 @@ def query_api(term, location):
     
     return response
 
+query_api("sushi", "94545")
+
 def main():
     parser = argparse.ArgumentParser()
 
@@ -103,4 +105,3 @@ def main():
             )
         )
 main()
-query_api("sushi", "94545")
