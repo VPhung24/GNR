@@ -13,16 +13,6 @@ def main_route():
         location_user = request.form['location']
         type_user = request.form['type']
         v = yelp_f.query_api(type_user, location_user)
-        restroom = []
-        restroom_url = []
-        restroom_image = []
-        restroom_review = []
-        restroom_rating = []
-        restroom_address = []
-        restroom_city = []
-        restroom_zipcode = []
-        restroom_state = []
-        restroom_true = []
         error = " "
         if not v:
             found = False
@@ -39,6 +29,16 @@ def main_route():
         else:
             g = len(v["businesses"])
             a = v["businesses"]
+            restroom = []
+            restroom_url = []
+            restroom_image = []
+            restroom_review = []
+            restroom_rating = []
+            restroom_address = []
+            restroom_city = []
+            restroom_zipcode = []
+            restroom_state = []
+            restroom_true = []
             if (g == 0):
                 found = False
                 error = "Sorry! We don't know of any Gender Neutral Restrooms in your area of the type you specified. Please try again!"
