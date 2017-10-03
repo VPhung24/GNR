@@ -9,6 +9,14 @@ sentry = Sentry(app, dsn='https://26f3e93f0a6e4c4b960aa24aa4f2e044:10c7768c45094
 app = Flask(__name__, template_folder='templates')
 app.config["DEBUG"] = True
 
+sentry = Sentry()
+
+def create_app():
+    app = Flask(__name__)
+    sentry.init_app(app, dsn='https://26f3e93f0a6e4c4b960aa24aa4f2e044:10c7768c450942bf90846d6d2ecd6ae3@sentry.io/225580', logging=True,
+                    level=logging.ERROR,
+                    logging_exclusions=("vivianphung", "logger2", ...))
+    return app
 @app.route("/", methods=["GET","POST"])
 def main_route():
     if request.method == "POST":
