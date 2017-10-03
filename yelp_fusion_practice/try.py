@@ -117,4 +117,3 @@ restroom_zipcode = []
 restroom_state = []
 restroom_true = []
 print(response)
-
