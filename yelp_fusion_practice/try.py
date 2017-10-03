@@ -66,7 +66,7 @@ def request(host, path, bearer_token, url_params=None):
 def search(bearer_token, term, location):
     url_params = {
         'term': term.replace(' ', '+'),
-        # 'location': location.replace(' ', '+'),
+        'location': location.replace(' ', '+'),
         'limit': SEARCH_LIMIT,
         'attributes': "gender_neutral_restrooms"
 
@@ -106,5 +106,6 @@ def main():
             )
         )
 
-
 print(response)
+
+
