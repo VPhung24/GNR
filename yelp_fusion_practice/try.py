@@ -116,10 +116,5 @@ restroom_city = []
 restroom_zipcode = []
 restroom_state = []
 restroom_true = []
-v = query_api("sushi", 94545)
-g = len(v["businesses"])
-print(g)
-v = v["businesses"]
-a = v[0]["name"]
-print(a)
+print(response)
 
