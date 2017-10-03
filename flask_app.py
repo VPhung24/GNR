@@ -26,7 +26,8 @@ def main_route():
         error = " "
         g = len(v["businesses"])
         v = v["businesses"]
-        if (not len(location_user) == 5):
+        tay = (location_user).is_integer()
+        if (not len(location_user) == 5) or (tay == False):
             found = False
             error = "Sorry! Please input a zipcode."
             return render_template("index.html", error = error, found = found)
