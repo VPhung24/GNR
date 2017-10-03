@@ -24,8 +24,6 @@ def main_route():
         restroom_state = []
         restroom_true = []
         error = " "
-        a = v["businesses"]
-        g = len(v["businesses"])
         if not v:
             found = False
             error = "Sorry! We don't know of any Gender Neutral Restrooms in your area of the type you specified. Please try again!"
@@ -42,6 +40,8 @@ def main_route():
             found = False
             error = "Sorry! We don't know of any Gender Neutral Restrooms in your area of the type you specified. Please try again!"
             return render_template("index.html", error = error, found = found)
+        g = len(v["businesses"])
+        a = v["businesses"]
         elif (g == 6):
             found = True
             three_or_less = False
