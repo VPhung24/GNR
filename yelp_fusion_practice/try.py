@@ -106,14 +106,5 @@ def main():
             )
         )
 
-restroom = []
-restroom_url = []
-restroom_image = []
-restroom_review = []
-restroom_rating = []
-restroom_address = []
-restroom_city = []
-restroom_zipcode = []
-restroom_state = []
-restroom_true = []
+
 print(response)
