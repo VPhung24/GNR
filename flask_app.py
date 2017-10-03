@@ -36,10 +36,6 @@ def main_route():
             found = False
             error = "Sorry! Please input more characters for Type of Establishment."
             return render_template("index.html", error = error, found = found)
-        elif (g == 0):
-            found = False
-            error = "Sorry! We don't know of any Gender Neutral Restrooms in your area of the type you specified. Please try again!"
-            return render_template("index.html", error = error, found = found)
         else:
             g = len(v["businesses"])
             a = v["businesses"]
