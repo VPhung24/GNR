@@ -38,11 +38,11 @@ def main_route():
             return render_template("index.html", error = error, found = found)
         g = len(v["businesses"])
         a = v["businesses"]
-        elif g == 0:
+        elif (g == 0):
             found = False
             error = "Sorry! We don't know of any Gender Neutral Restrooms in your area of the type you specified. Please try again!"
             return render_template("index.html", error = error, found = found)
-        elif g == 6:
+        elif (g == 6):
             found = True
             three_or_less = False
             for i in range(0, g):
