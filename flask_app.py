@@ -1,4 +1,6 @@
 import sys
+from __future__ import print_function
+from uszipcode import ZipcodeSearchEngine
 from flask import Flask, render_template, flash, request, url_for, redirect, session
 from flask import *
 from functools import wraps
@@ -23,11 +25,11 @@ def main_route():
             found = False
             error = "Sorry! Please input valid type of establishment. (larger then three characters)"
             return render_template("index.html", error = error, found = found)
-        # elif yelp_f.postalValidate(location_user):
-        #     found = False
-        #     error = "Sorry! Please input a valid zipcode."
-        #     return render_template("index.html", error = error, found = found)
-        # Testing if its a zipcode is not working....
+        elif bool(search.by_zipcode(location_user)) == False:
+            found = False
+            error = "Sorry! Please input valid type of establishment. (larger then three characters)"
+            g = s.strip().upper()
+
         else:
             v = yelp_f.query_api(type_user, location_user)
             restroom = []
