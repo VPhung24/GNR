@@ -16,9 +16,13 @@ def main_route():
         location_user = request.form['location']
         type_user = request.form['type']
         zipCode = re.compile(r"\s*(\w\d\s*){3}\s*")
-        if ((not len(location_user) == 5) or (len(type_user) <= 3)):
+        if (not len(location_user) == 5):
             found = False
-            error = "Sorry! Please input a zipcode or valid type of establishment"
+            error = "Sorry! Please input a vaild zipcode."
+            return render_template("index.html", error = error, found = found)
+        elif (len(type_user) <= 3):
+            found = False
+            error = "Sorry! Please input valid type of establishment. (larger then three characters)"
             return render_template("index.html", error = error, found = found)
         elif not zipCode.match(location_user):
             found = False
