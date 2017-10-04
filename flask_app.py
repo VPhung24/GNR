@@ -113,3 +113,6 @@ def slashboard():
         return render_template("index.html")
     except Exception as e:
         return render_template("500.html", error = e)
+if __name__ == '__main__':
+    # listen on external IPs
+    app.run(host=config.env['host'], port=config.env['port'], debug=True)
