@@ -23,7 +23,7 @@ def main_route():
             found = False
             error = "Sorry! Please input valid type of establishment. (larger then three characters)"
             return render_template("index.html", error = error, found = found)
-        elif not yelp_f.postalValidate(location_user):
+        elif yelp_f.postalValidate(location_user):
             found = False
             error = "Sorry! Please input a valid zipcode."
             return render_template("index.html", error = error, found = found)
