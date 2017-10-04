@@ -1,5 +1,4 @@
 import sys
-from __future__ import print_function
 from uszipcode import ZipcodeSearchEngine
 from flask import Flask, render_template, flash, request, url_for, redirect, session
 from flask import *
