@@ -3,6 +3,7 @@ from flask import Flask, render_template, flash, request, url_for, redirect, ses
 from flask import *
 from functools import wraps
 import yelp_f
+import config
 
 app = Flask(__name__, template_folder='templates')
 app.config["DEBUG"] = True
