@@ -117,4 +117,4 @@ def slashboard():
         return render_template("500.html", error = e)
 if __name__ == '__main__':
     # listen on external IPs
-    http.ListenAndServe("107.170.18.23:8080", nil)
+    app.run(host=config.env['host'], port=config.env['port'], debug=True)
