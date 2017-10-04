@@ -23,10 +23,11 @@ def main_route():
             found = False
             error = "Sorry! Please input valid type of establishment. (larger then three characters)"
             return render_template("index.html", error = error, found = found)
-        elif yelp_f.postalValidate(location_user):
-            found = False
-            error = "Sorry! Please input a valid zipcode."
-            return render_template("index.html", error = error, found = found)
+        # elif yelp_f.postalValidate(location_user):
+        #     found = False
+        #     error = "Sorry! Please input a valid zipcode."
+        #     return render_template("index.html", error = error, found = found)
+        # Testing if its a zipcode is not working....
         else:
             v = yelp_f.query_api(type_user, location_user)
             restroom = []
