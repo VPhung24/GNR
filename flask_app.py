@@ -15,7 +15,6 @@ def main_route():
     if request.method == "POST":
         location_user = request.form['location']
         type_user = request.form['type']
-        zipCode = re.compile(r"\s*(\w\d\s*){3}\s*")
         if (not len(location_user) == 5):
             found = False
             error = "Sorry! Please input a vaild zipcode."
@@ -24,7 +23,7 @@ def main_route():
             found = False
             error = "Sorry! Please input valid type of establishment. (larger then three characters)"
             return render_template("index.html", error = error, found = found)
-        elif not zipCode.match(location_user):
+        elif not yelp_f.postalValidate(location_user):
             found = False
             error = "Sorry! Please input a valid zipcode."
             return render_template("index.html", error = error, found = found)
