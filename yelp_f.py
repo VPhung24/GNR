@@ -31,12 +31,12 @@ SEARCH_LIMIT = 6
 def postalValidate(S):
    S = S.replace(" ","") 
    if len(S) != 6 or S.isalpha() or S.isdigit(): 
-      return False  
+      return False
    if not S[0:5:2].isalpha(): 
-      return False  
+      return False
    if not S[1:6:2].isdigit(): 
-      return False 
-   return S.upper()  
+      return False
+   return S.upper()
 
 def obtain_bearer_token(host, path):
     url = '{0}{1}'.format(host, quote(path.encode('utf8')))
