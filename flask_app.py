@@ -26,9 +26,8 @@ def main_route():
             return render_template("index.html", error = error, found = found)
         elif bool(search.by_zipcode(location_user)) == False:
             found = False
-            error = "Sorry! Please input valid type of establishment. (larger then three characters)"
-            g = s.strip().upper()
-
+            error = "Sorry! Please input valid zipcode"
+            return render_template("index.html", error = error, found = found)
         else:
             v = yelp_f.query_api(type_user, location_user)
             restroom = []
