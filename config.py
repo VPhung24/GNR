@@ -1,7 +1,7 @@
 env = dict(
-	host = 'vphung.mysql.pythonanywhere-services.com',
+	host = 'localhost',
 	port = 3000,
-	user = 'vphung', 
-	password = 'taylorswiftvivian',
-	db = 'esafe',
+	user = 'root', 
+	password = 'root',
+	# db = 'esafe',
 )
