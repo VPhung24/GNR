@@ -13,43 +13,43 @@ app.config["DEBUG"] = True
 @app.route("/", methods=["GET","POST"])
 def main_route():
     if request.method == "POST":
-        if (request.form['zip_code']):
-            if (request.form['zip_code'] == 94502):
-                found = False
-                great = 94502
-                return render_template("index.html", great = great, found = found)
-            elif (request.form['zip_code'] == 94501):
-                found = False
-                great = 94501
-                return render_template("index.html", great = great, found = found)
-            elif (request.form['zip_code'] == 94545):
-                found = False
-                great = 94545
-                return render_template("index.html", great = great, found = found)
-            else:
-                found = False
-                great = False
-                error = "This is an error please try again. (It would also be helpful to email: vivianphung@outlook.com"
-                return render_template("index.html", error = error, found = found, great = great)
-        elif (request.form['type_of_place']):
-            if (request.form['type_of_place'] == "Sushi"):
-                found = False
-                great = 94502
-                return render_template("index.html", great = great, found = found)
-            elif (request.form['type_of_place'] == "Steak"):
-                found = False
-                great = 94501
-                return render_template("index.html", great = great, found = found)
-            elif (request.form['type_of_place'] == "Burrito"):
-                found = False
-                great = 94545
-                return render_template("index.html", great = great, found = found)
-            else:
-                found = False
-                great = False
-                error = "This is an error please try again. (It would also be helpful to email: vivianphung@outlook.com"
-                return render_template("index.html", error = error, found = found, great = great)
-        elif (request.form['location'] or request.form['type']):
+        # if (request.form['zip_code']):
+        #     if (request.form['zip_code'] == 94502):
+        #         found = False
+        #         great = 94502
+        #         return render_template("index.html", great = great, found = found)
+        #     elif (request.form['zip_code'] == 94501):
+        #         found = False
+        #         great = 94501
+        #         return render_template("index.html", great = great, found = found)
+        #     elif (request.form['zip_code'] == 94545):
+        #         found = False
+        #         great = 94545
+        #         return render_template("index.html", great = great, found = found)
+        #     else:
+        #         found = False
+        #         great = False
+        #         error = "This is an error please try again. (It would also be helpful to email: vivianphung@outlook.com"
+        #         return render_template("index.html", error = error, found = found, great = great)
+        # elif (request.form['type_of_place']):
+        #     if (request.form['type_of_place'] == "Sushi"):
+        #         found = False
+        #         great = 94502
+        #         return render_template("index.html", great = great, found = found)
+        #     elif (request.form['type_of_place'] == "Steak"):
+        #         found = False
+        #         great = 94501
+        #         return render_template("index.html", great = great, found = found)
+        #     elif (request.form['type_of_place'] == "Burrito"):
+        #         found = False
+        #         great = 94545
+        #         return render_template("index.html", great = great, found = found)
+        #     else:
+        #         found = False
+        #         great = False
+        #         error = "This is an error please try again. (It would also be helpful to email: vivianphung@outlook.com"
+        #         return render_template("index.html", error = error, found = found, great = great)
+        if (request.form['location'] or request.form['type']):
             location_user = request.form['location']
             type_user = request.form['type']
             search = ZipcodeSearchEngine()
