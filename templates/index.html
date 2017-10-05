@@ -20,7 +20,7 @@
       <span class="input-group-btn">
         <button class="btn btn-light" type="button">Zip Code</button>
       </span>
-      <input type="text" class="form-control btn-light" placeholder="Ex: 94545, 94501, 94502" aria-label="Ex: 94545, 94501, 94502">
+      <input type="text" class="form-control btn-light" placeholder="Ex: 94545, 94501, 94502" name="location" value="{{request.form.location}}" aria-label="Ex: 94545, 94501, 94502">
     </div>
   </div>
   <div class="col-4">
@@ -28,8 +28,11 @@
       <span class="input-group-btn">
         <button class="btn btn-light" type="button">Type of Establishment</button>
       </span>
-      <input type="text" class="form-control btn-light" placeholder="Ex: Sushi, Pie, Steak" aria-label="Ex: Sushi, Pie, Steak">
+      <input type="text" class="form-control btn-light" placeholder="Ex: Sushi, Pie, Steak" name="type" value="{{request.form.type}}" aria-label="Ex: Sushi, Pie, Steak">
     </div>
+  </div>
+  <div class="col-4">
+  <input class="btn btn-light" type="submit" value="Submit">
   </div>
 </div>
 
