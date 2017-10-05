@@ -6,8 +6,8 @@ import yelp_f
 import config
 from http import *
 from uszipcode import ZipcodeSearchEngine
-from raven.contrib.flask import Sentry
-sentry = Sentry(app, dsn='https://26f3e93f0a6e4c4b960aa24aa4f2e044:10c7768c450942bf90846d6d2ecd6ae3@sentry.io/225580')
+# from raven.contrib.flask import Sentry
+# sentry = Sentry(app, dsn='https://26f3e93f0a6e4c4b960aa24aa4f2e044:10c7768c450942bf90846d6d2ecd6ae3@sentry.io/225580')
 
 app = Flask(__name__, template_folder='templates')
 app.config["DEBUG"] = True
