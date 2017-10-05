@@ -26,7 +26,7 @@ def main_route():
             return render_template("index.html", error = error, found = found)
         elif (len(type_user) <= 3):
             found = False
-            error = "Sorry! Please input valid type of establishment. (larger then three characters)"
+            error = "Sorry! Please input more than three characters for type of establishment"
             return render_template("index.html", error = error, found = found)
         else:
             v = yelp_f.query_api(type_user, location_user)
