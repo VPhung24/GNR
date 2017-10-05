@@ -19,13 +19,13 @@
     <div class="col-4">
         <div class="input-group">
           <div class="input-group-btn">
-            <button placeholder="Zip Code" type="button" class="form-control" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Type of Establishment</button>
+            <button placeholder="Zip Code" type="button" class="form-control" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Zip Code</button>
             <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" href="#">Something else here</a>
+              <a class="dropdown-item" href="#">94501</a>
+              <a class="dropdown-item" href="#">94545</a>
+              <a class="dropdown-item" href="#">10118</a>
                 <div role="separator" class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Separated link</a>
+                  <a class="dropdown-item" href="#">Press to find estimated zipcode</a>
                 </div>
             </div>
             <input type="text" class="form-control" placeholder="Ex: 94501, 94545" name="type" value="{{request.form.location}}">
@@ -38,11 +38,11 @@
               <div class="input-group-btn">
                 <button placeholder="Type of Establishment" name="type" type="button" class="form-control" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Type of Establishment</button>
                 <div class="dropdown-menu">
-                  <a class="dropdown-item" href="#">Action</a>
-                  <a class="dropdown-item" href="#">Another action</a>
-                  <a class="dropdown-item" href="#">Something else here</a>
+                  <a class="dropdown-item" href="#">Sushi</a>
+                  <a class="dropdown-item" href="#">Steak</a>
+                  <a class="dropdown-item" href="#">Burrito</a>
                   <div role="separator" class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Separated link</a>
+                  <a class="dropdown-item" href="#">I'm feeling random</a>
                   </div>
                 </div>
                 <input type="text" class="form-control" placeholder="Ex. Steak, Burrito, Dentist" name="type" value="{{request.form.type}}">
