@@ -1,12 +1,10 @@
 import sys
-from uszipcode import ZipcodeSearchEngine
 from flask import Flask, render_template, flash, request, url_for, redirect, session
 from flask import *
 from functools import wraps
 import yelp_f
 import config
 from http import *
-import re
 
 app = Flask(__name__, template_folder='templates')
 app.config["DEBUG"] = True
@@ -24,10 +22,10 @@ def main_route():
             found = False
             error = "Sorry! Please input valid type of establishment. (larger then three characters)"
             return render_template("index.html", error = error, found = found)
-        elif bool(search.by_zipcode(location_user)) == False:
-            found = False
-            error = "Sorry! Please input valid zipcode"
-            return render_template("index.html", error = error, found = found)
+        # elif bool(search.by_zipcode(location_user)) == False:
+        #     found = False
+        #     error = "Sorry! Please input valid zipcode"
+        #     return render_template("index.html", error = error, found = found)
         else:
             v = yelp_f.query_api(type_user, location_user)
             restroom = []
