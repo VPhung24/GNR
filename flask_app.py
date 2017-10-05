@@ -16,7 +16,11 @@ def main_route():
         location_user = request.form['location']
         type_user = request.form['type']
         search = ZipcodeSearchEngine()
-        if ((not len(location_user) == 5) or (bool(search.by_zipcode(location_user)) == False)):
+        if (len(location_user) == 0) or (len(type_user) == 0):
+            found = False
+            error = "Please provide inputs."
+            return render_template("index.html", error = error, found = found)
+        elif ((not len(location_user) == 5) or (bool(search.by_zipcode(location_user)) == False)):
             found = False
             error = "Sorry! Please input a vaild zipcode."
             return render_template("index.html", error = error, found = found)
