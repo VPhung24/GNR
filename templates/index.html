@@ -12,8 +12,8 @@
 <h1> Find Gender Neutral Restrooms</h1>
 <!--   <form action="" class="form-inline" method="post">
     <input type="text" class="form-control" placeholder="Zip Code" name="location" value="{{request.form.location}}">
-		<input type="text" class="form-control" placeholder="Type of Establishment" name="type" value="{{request.form.type}}">
-		<input class="btn btn-light" type="submit" value="Submit"> class="btn btn-secondary dropdown-toggle" -->
+    <input type="text" class="form-control" placeholder="Type of Establishment" name="type" value="{{request.form.type}}">
+    <input class="btn btn-light" type="submit" value="Submit"> class="btn btn-secondary dropdown-toggle" -->
   <form method="post">
   <div class="row">
     <div class="col-4">
@@ -23,38 +23,37 @@
             <div class="dropdown-menu">
               <a class="dropdown-item" href="#">94501</a>
               <a class="dropdown-item" href="#">94545</a>
-              <a class="dropdown-item" href="#">94502</a>
-              <div role="separator" class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Press to find estimated zipcode</a>
-              </div>
+              <a class="dropdown-item" href="#">10118</a>
+                <div role="separator" class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Press to find estimated zipcode</a>
+                </div>
             </div>
             <input type="text" class="form-control" placeholder="Ex: 94501, 94545" name="location" value="{{request.form.location}}">
           </div>
-        </div>
-          <div class="col-4">
-            <div class="form-group">
-              <div class="row">
-                <div class="input-group">
-                  <div class="input-group-btn">
-                    <button placeholder="Type of Establishment" type="button" class="form-control" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Type of Establishment</button>
-                    <div class="dropdown-menu">
-                      <a class="dropdown-item" href="#">Sushi</a>
-                      <a class="dropdown-item" href="#">Steak</a>
-                      <a class="dropdown-item" href="#">Burrito</a>
-                      <div role="separator" class="dropdown-divider"></div>
-                      <a class="dropdown-item" href="#">I'm feeling random</a>
-                      </div>
-                    </div>
-                    <input type="text" class="form-control" placeholder="Ex. Steak, Burrito, Dentist" name="type" value="{{request.form.type}}">
+      </div>
+    <div class="col-4">
+      <div class="form-group">
+        <div class="row">
+            <div class="input-group">
+              <div class="input-group-btn">
+                <button placeholder="Type of Establishment" type="button" class="form-control" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Type of Establishment</button>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Sushi</a>
+                  <a class="dropdown-item" href="#">Steak</a>
+                  <a class="dropdown-item" href="#">Burrito</a>
+                  <div role="separator" class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">I'm feeling random</a>
                   </div>
                 </div>
+                <input type="text" class="form-control" placeholder="Ex. Steak, Burrito, Dentist" name="type" value="{{request.form.type}}">
               </div>
-            </div>
-          </div>
-          <div class="col-4">
-            <input class="btn btn-light" type="submit" value="Submit">
           </div>
         </div>
+      </div> 
+      <div class="col-4">
+      <input class="btn btn-light" type="submit" value="Submit">
+      </div>
+    </div>
   </form>
 
 
@@ -335,13 +334,11 @@
     border-collapse:collapse;
     height: 20;
 }
-
     body {
     height: 100%;
     font-family:'Exo 2', sans-serif;
     background: linear-gradient(#F5B7B1, #D2B4DE, #AED6F1, #A2D9CE, #ABEBC6, #FAD7A0, #EDBB99); /* Standard syntax (must be last) */
     margin-bottom: 60px;
-
     }
     .footer {
       position: absolute;
