@@ -20,15 +20,23 @@
         <div class="input-group">
           <div class="input-group-btn">
             <button placeholder="Zip Code" type="button" class="form-control" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Zip Code</button>
-          <input type="text" class="form-control" placeholder="Ex: 94501, 94545" name="location" value="{{request.form.location}}">
-        </div>
+            <!-- <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">94501</a>
+              <a class="dropdown-item" href="#">94545</a>
+              <a class="dropdown-item" href="#">94502</a>
+                <div role="separator" class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Press to find estimated zipcode</a>
+                </div>
+            </div> -->
+            <input type="text" class="form-control" placeholder="Ex: 94501, 94545" name="location" value="{{request.form.location}}">
+          </div>
       </div>
     <div class="col-4">
       <div class="form-group">
         <div class="row">
             <div class="input-group">
               <div class="input-group-btn">
-                <button placeholder="Type of Establishment" type="button" class="form-control" data-toggle="popover" data-placement="bottom" data-content="Zip">Type of Establishment</button>
+                <button placeholder="Type of Establishment" type="button" class="form-control" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Type of Establishment</button>
                 <div class="dropdown-menu">
                   <a class="dropdown-item" href="#">Sushi</a>
                   <a class="dropdown-item" href="#">Steak</a>
@@ -47,6 +55,7 @@
       </div>
     </div>
   </form>
+
 
   {{ error }}
 <br> </br>
