@@ -5,6 +5,7 @@ from functools import wraps
 import yelp_f
 import config
 from http import *
+from uszipcode import ZipcodeSearchEngine
 
 app = Flask(__name__, template_folder='templates')
 app.config["DEBUG"] = True
@@ -14,6 +15,7 @@ def main_route():
     if request.method == "POST":
         location_user = request.form['location']
         type_user = request.form['type']
+        search = ZipcodeSearchEngine()
         if (not len(location_user) == 5):
             found = False
             error = "Sorry! Please input a vaild zipcode."
@@ -22,10 +24,10 @@ def main_route():
             found = False
             error = "Sorry! Please input valid type of establishment. (larger then three characters)"
             return render_template("index.html", error = error, found = found)
-        # elif bool(search.by_zipcode(location_user)) == False:
-        #     found = False
-        #     error = "Sorry! Please input valid zipcode"
-        #     return render_template("index.html", error = error, found = found)
+        elif (bool(search.by_zipcode(location_user)) == False):
+            found = False
+            error = "Sorry! Please input valid zipcode"
+            return render_template("index.html", error = error, found = found)
         else:
             v = yelp_f.query_api(type_user, location_user)
             restroom = []
