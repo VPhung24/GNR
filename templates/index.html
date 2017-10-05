@@ -14,55 +14,24 @@
     <input type="text" class="form-control" placeholder="Zip Code" name="location" value="{{request.form.location}}">
     <input type="text" class="form-control" placeholder="Type of Establishment" name="type" value="{{request.form.type}}">
     <input class="btn btn-light" type="submit" value="Submit"> class="btn btn-secondary dropdown-toggle" -->
-  <form method="post">
-  <div class="row">
-    <div class="col-4">
-        <div class="input-group">
-          <div class="input-group-btn">
-            <button placeholder="Zip Code" type="button" class="form-control" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Zip Code</button>
-            <form method="post">
-            <div class="dropdown-menu">
-              <a class="dropdown-item" name="zip_code" value = 94502 >94501</a>
-              <a class="dropdown-item" name="zip_code" value = 94545 >94545</a>
-              <a class="dropdown-item" name="zip_code" value = 94502 >94502</a>
-<!--                 <div role="separator" class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Press to find estimated zipcode</a>
-                </div> -->
-                 {% if great == 94501 %}
-                 {% endif %}
-              </form>
-            </div>
-            </form>
-            <input type="text" class="form-control" placeholder="Ex: 94501, 94545" name="location" value="{{request.form.location}}">
-          </div>
-      </div>
-    <div class="col-4">
-      <div class="form-group">
-        <div class="row">
-            <div class="input-group">
-              <div class="input-group-btn">
-                <button placeholder="Type of Establishment" type="button" class="form-control" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Type of Establishment</button>
-                <form method="post">
-                <div class="dropdown-menu">
-                  <a class="dropdown-item" name="type_of_place" value = "Sushi" >Sushi</a>
-                  <a class="dropdown-item" name="type_of_place" value = "Steak" >Steak</a>
-                  <a class="dropdown-item" name="type_of_place" value = "Burrito" >Burrito</a>
-<!--                   <div role="separator" class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">I'm feeling random</a>
-                  </div> -->
-                </div>
-                 </form>d
-                <input type="text" class="form-control" placeholder="Ex. Steak, Burrito, Dentist" name="type" value="{{request.form.type}}">
-              </div>
-          </div>
-        </div>
-      </div> 
-      <div class="col-4">
-      <input class="btn btn-light" type="submit" value="Submit">
-      </div>
+<div class="row">
+  <div class="col-lg-6">
+    <div class="input-group">
+      <span class="input-group-btn">
+        <button class="btn btn-secondary" type="button">Go!</button>
+      </span>
+      <input type="text" class="form-control" placeholder="Search for..." aria-label="Search for...">
     </div>
-  </form>
-
+  </div>
+  <div class="col-lg-6">
+    <div class="input-group">
+      <span class="input-group-btn">
+        <button class="btn btn-secondary" type="button">Go!</button>
+      </span>
+      <input type="text" class="form-control" placeholder="Search for..." aria-label="Search for...">
+    </div>
+  </div>
+</div>
 
   {{ error }}
 <br> </br>
