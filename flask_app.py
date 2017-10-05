@@ -61,7 +61,7 @@ def main_route():
             error = "Sorry! Please input a vaild zipcode."
             return render_template("index.html", error = error, found = found)
         elif (len(type_user) <= 3):
-            found = Falseu
+            found = False
             error = "Sorry! Please input more than three characters for type of establishment"
             return render_template("index.html", error = error, found = found)
         else:
