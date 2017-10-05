@@ -15,8 +15,8 @@ except ImportError:
     from urllib import quote
     from urllib import urlencode
 
-CLIENT_ID = "zBGkYQVe0aicViSmzj9SPg"
-CLIENT_SECRET = "bADttn0PFCMqiqgICFLOTz1WzUMyGXsBwnzjE0gd4vm1nUrpyMovpDCBR9bWja3z"
+CLIENT_ID = "amyUkBuEEIpUv_3i1Gw0w"
+CLIENT_SECRET = "J8noTtDLqcUgsvtXwDF0kIpnqKmm3TXXbX2pClrhkqxXlO89geF3aAClsIuvcVSF"
 
 API_HOST = 'https://api.yelp.com'
 SEARCH_PATH = '/v3/businesses/search'
@@ -30,8 +30,8 @@ SEARCH_LIMIT = 6
 
 def obtain_bearer_token(host, path):
     url = '{0}{1}'.format(host, quote(path.encode('utf8')))
-    assert CLIENT_ID, "zBGkYQVe0aicViSmzj9SPg"
-    assert CLIENT_SECRET, "bADttn0PFCMqiqgICFLOTz1WzUMyGXsBwnzjE0gd4vm1nUrpyMovpDCBR9bWja3z"
+    assert CLIENT_ID, "amyUkBuEEIpUv_3i1Gw0w"
+    assert CLIENT_SECRET, "J8noTtDLqcUgsvtXwDF0kIpnqKmm3TXXbX2pClrhkqxXlO89geF3aAClsIuvcVSF"
     data = urlencode({
         'client_id': CLIENT_ID,
         'client_secret': CLIENT_SECRET,
