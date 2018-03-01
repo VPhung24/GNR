@@ -1,0 +1,235 @@
+{% extends "header.html" %}
+
+{% block body %}
+{% if not found %}
+
+<div class="container-fluid" style="padding-left: 10%; min-height: 100%;">
+<br> </br>
+<br> </br>
+<br> </br>
+<br> </br>
+<br> </br>
+
+<h1> Find Gender Neutral Restrooms</h1>
+<!--   <form action="" class="form-inline" method="post">
+    <input type="text" class="form-control" placeholder="Zip Code" name="location" value="{{request.form.location}}">
+    <input type="text" class="form-control" placeholder="Type of Establishment" name="type" value="{{request.form.type}}">
+    <input class="btn btn-light" type="submit" value="Submit"> class="btn btn-secondary dropdown-toggle" -->
+<form method="post" class="form-inline">
+        <button class="btn btn-light" disabled>Zip Code</button>
+      <input type="text" class="form-control btn-light" placeholder="Ex: 94545, 94501, 94502" name="location" value="{{request.form.location}}" aria-label="Ex: 94545, 94501, 94502"> <pre> </pre>
+        <button class="btn btn-light" disabled>Type of Establishment</button>
+      <input type="text" class="form-control btn-light" placeholder="Ex: Sushi, Fries, Steak" name="type" value="{{request.form.type}}" aria-label="Ex: Sushi, Fries, Steak"> <pre> </pre>
+  <input class="btn btn-light" type="submit" value="Submit">
+</form>
+  {{ error }}
+<br> </br>
+
+<br> </br>
+</div>
+
+
+{% endif %}
+
+{% if found %}
+
+<br> </br>
+
+<h2>Here are the results!</h2>
+
+<div class="card-group">
+  <div class="card bg-transparent">
+    <a href="{{ restroom_url0 }}">
+      <img class="card-img-top" src="{{ restroom_image0 }}"/>
+    </a>
+      <div class="card-body bg-transparent">
+        <h4 class="card-title">{{ restroom0 }}</h4>
+          <p class="card-text">{{ restroom_address0 }}. <br> {{ restroom_city0 }}, {{ restroom_state0 }} {{ restroom_zipcode0 }}</p>
+      </div>
+      <div class="card-footer bg-transparent">
+        <small class="text-bold">{{ restroom_rating0 }} | Rated by {{ restroom_review0 }}</small>
+      </div>
+  </div>
+
+  {% if restroom_true1 %}
+
+    <div class="card bg-transparent">
+      <a href="{{ restroom_url1 }}">
+        <img class="card-img-top" src="{{ restroom_image1 }}"/>
+      </a>
+    <div class="card-body bg-transparent">
+      <h4 class="card-title">{{ restroom1 }}</h4>
+        <p class="card-text">{{ restroom_address1 }}. <br> {{ restroom_city1 }}, {{ restroom_state1 }} {{ restroom_zipcode1 }}</p>
+    </div>
+      <div class="card-footer bg-transparent">
+        <small class="text-bold" style="bold">{{ restroom_rating1 }} | Rated by {{ restroom_review1 }}</small>
+      </div>
+    </div>
+
+  {% endif %}
+
+  {% if not restroom_true1 %}
+
+  <div class="card bg-transparent">
+    <div class="card-body bg-transparent">
+    </div>
+    <div class="card-footer bg-transparent">
+    </div>
+  </div>
+
+  {% endif %}
+
+  {% if restroom_true2 %}
+
+  <div class="card bg-transparent">
+    <a href="{{ restroom_url2 }}">
+      <img class="card-img-top" src="{{ restroom_image2 }}"/>
+    </a>
+    <div class="card-body bg-transparent">
+      <h4 class="card-title">{{ restroom2 }}</h4>
+        <p class="card-text">{{ restroom_address2 }}. <br> {{ restroom_city2 }}, {{ restroom_state2 }} {{ restroom_zipcode2 }}</p>
+    </div>
+    <div class="card-footer bg-transparent">
+      <small class="text-bold" style="bold">{{ restroom_rating2 }} | Rated by {{ restroom_review2 }}</small>
+    </div>
+  </div>
+
+  {% endif %}
+
+  {% if not restroom_true2 %}
+
+  <div class="card bg-transparent">
+    <div class="card-body bg-transparent">
+    </div>
+    <div class="card-footer bg-transparent">
+    </div>
+  </div>
+
+  {% endif %}
+
+</div>
+
+  <br> </br>
+
+{% if not three_or_less %}
+
+<div class="card-group">
+
+  {% if restroom_true3 %}
+  <div class="card bg-transparent">
+    <a href="{{ restroom_url3 }}">
+      <img class="card-img-top" src="{{ restroom_image3 }}"/>
+      <div class="card-body bg-transparent">
+    </a>
+      <h4 class="card-title">{{ restroom3 }}</h4>
+      <p class="card-text"> {{ restroom_address3 }}. <br> {{ restroom_city3 }}, {{ restroom_state3 }} {{ restroom_zipcode3 }}</p>
+    </div>
+    <div class="card-footer bg-transparent">
+      <small class="text-bold"> {{ restroom_rating3 }} | Rated by {{ restroom_review3 }}</small>
+    </div>
+  </div>
+
+    {% endif %}
+
+    {% if not restroom_true3 %}
+
+  <div class="card bg-transparent">
+    <div class="card-body bg-transparent">
+    </div>
+    <div class="card-footer bg-transparent">
+    </div>
+  </div>
+
+    {% endif %}
+
+    {% if restroom_true4 %}
+
+  <div class="card bg-transparent">
+    <a href="{{ restroom_url4 }}" >
+      <img class="card-img-top" src="{{ restroom_image4 }}"/>
+    </a>
+    <div class="card-body bg-transparent">
+      <h4 class="card-title">{{ restroom4 }}</h4>
+        <p class="card-text">{{ restroom_address4 }}. <br> {{ restroom_city4 }}, {{ restroom_state4 }} {{ restroom_zipcode4 }} </p>
+    </div>
+    <div class="card-footer bg-transparent">
+      <small class="text-bold">{{ restroom_rating4 }} | Rated by {{ restroom_review4 }}</small>
+    </div>
+  </div>
+
+    {% endif %}
+
+    {% if not restroom_true4 %}
+
+  <div class="card bg-transparent">
+    <div class="card-body bg-transparent">
+    </div>
+    <div class="card-footer bg-transparent">
+    </div>
+  </div>
+
+    {% endif %}
+
+    {% if restroom_true5 %}
+
+  <div class="card bg-transparent">
+    <a href="{{ restroom_url5 }}">
+    <img class="card-img-top" src="{{ restroom_image5 }}"/>
+    </a>
+    <div class="card-body bg-transparent">
+      <h4 class="card-title">{{ restroom5 }}</h4>
+      <p class="card-text">{{ restroom_address5 }}. <br> {{ restroom_city5 }}, {{ restroom_state5 }} {{ restroom_zipcode5 }}</p>
+    </div>
+    <div class="card-footer bg-transparent">
+      <small class="text-bold"> {{ restroom_rating5 }} | Rated by {{ restroom_review5 }}</small>
+    </div>
+  </div>
+
+    {% endif %}
+
+    {% if not restroom_true5 %}
+
+  <div class="card bg-transparent">
+    <div class="card-body bg-transparent">
+    </div>
+    <div class="card-footer bg-transparent">
+    </div>
+  </div>
+
+    {% endif %}
+
+</div>
+
+{% endif %}
+
+{% endif %}
+
+  <style>
+    resize {
+     width:50%;
+     height:50%;
+    }
+    html {
+      position: relative;
+      min-height: 100%;
+    }
+    table, th, td {
+    border-collapse:collapse;
+    height: 20;
+}
+    body {
+    height: 100%;
+    font-family:'Exo 2', sans-serif;
+    background: linear-gradient(#F5B7B1, #D2B4DE, #AED6F1, #A2D9CE, #ABEBC6, #FAD7A0, #EDBB99); /* Standard syntax (must be last) */
+    margin-bottom: 60px;
+    }
+    .footer {
+      position: absolute;
+      bottom: 0;
+      width: 90%;
+      /* Set the fixed height of the footer here */
+      height: 60px;
+      line-height: 60px; /* Vertically center the text there */
+    }
+  </style>
+{% endblock %}

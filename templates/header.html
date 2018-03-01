@@ -3,7 +3,7 @@
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="apple-touch-icon" sizes="180x180" href="static/images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="static/images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="static/images/favicon-16x16.png">
@@ -14,38 +14,101 @@
     <meta name="theme-color" content="#ffffff">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Exo+2:700|Poppins:500|Quicksand:500" rel="stylesheet">
-  
-  <title> 
-    GNR 
+    <link href="https://fonts.googleapis.com/css?family=Lato:400" rel="stylesheet">
+
+    <!-- Google Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+    <!-- W3CSS
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    -->
+
+    <style>
+        .w3-card,.w3-card-2{box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)}
+        .w3-card-4,.w3-hover-shadow:hover{box-shadow:0 4px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.19)}
+        @media (min-width:768px){.card-deck{display:-ms-flexbox;display:flex;-ms-flex-flow:row wrap;flex-flow:row wrap;margin-right:-15px;margin-left:-15px}.card-deck .card{display:-ms-flexbox;display:flex;-ms-flex:1 0 0%;flex:1 0 0%;-ms-flex-direction:column;flex-direction:column;margin-right:15px;margin-left:15px}}
+    </style>
+
+  <title>
+    GNR
   </title>
   </head>
 
   <body>
-  <nav class="navbar navbar-expand-lg">
 
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-    
-    <span class="navbar-toggler-icon"></span>
 
-    </button>
+    <div class="pos-f-t">
+      <div class="collapse" id="navbarToggleExternalContent">
+        <div class="bg-transparent p-4 text-center">
+          <h4 class="text-white">About</h4><br>
+          <span class="text-muted">
+              Gender Neutral Restrooms (GNR) is a <a href="http://www.congressionalappchallenge.us/" target="_blank">2017 Congressional App Challenge winner</a> web app by Vivian Phung that helps people find gender-neutral bathrooms from a database of over 50 million businesses across the US.
+          </span><br><br>
+            <button type="button" class="btn btn-light"><a href="https://github.com/VPhung24/GNR" target="_blank"><img src="https://assets-cdn.github.com/images/modules/logos_page/GitHub-Logo.png" style="width:50px;padding-bottom:5px;" alt="..."></img></a></button>
+          <br><br><hr style="width:60%;">
+        </div>
+      </div>
+      <nav class="navbar navbar-expand-lg bg-transparent">
 
-  <a class="navbar-brand" href="http://restroom.network/">
-    <img src="static/images/rainbow.png" width="30" height="30">
-  </a>
+        <a class="navbar-brand" href="http://restroom.network/">
+            <img src="static/images/rainbow.png" width="30" height="30">
+        </a>
 
-  <div class="collapse navbar-collapse bg-transparent" id="navbarTogglerDemo01">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-    <a class="navbar-brand" href="http://restroom.network/">GNR: Restrooms for All</a>
+        <div class="collapse navbar-collapse bg-transparent" id="navbarTogglerDemo01">
+            <a class="navbar-brand" href="http://restroom.network/">GNR: Restrooms for All</a>
+            <ul>
+            </ul>
+        </div>
 
-  <ul>
-  </ul>
+        <button class="btn btn-link material-icons" type="button" style="color: inherit; text-decoration: none;" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            more_vert
+        </button>
+      </nav>
+    </div>
 
-  </div>
+    <!--
+    <nav class="navbar navbar-expand-lg">
 
-</nav>
-			{% block body %}  
+        <a class="navbar-brand" href="http://restroom.network/">
+            <img src="static/images/rainbow.png" width="30" height="30">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse bg-transparent" id="navbarTogglerDemo01">
+            <a class="navbar-brand" href="http://restroom.network/">GNR: Restrooms for All</a>
+            <ul>
+            </ul>
+        </div>
+
+    </nav>
+    -->
+
+    <!--
+    <nav class="navbar navbar-light navbar-expand-lg bg-transparent">
+        <a class="navbar-brand" href="http://restroom.network/"></a>
+            <img src="static/images/rainbow.png" width="30" height="30" class="d-inline-block align-top" alt="logo">
+        </a>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <a class="navbar-brand" href="http://restroom.network/">GNR: Restrooms for All</a>
+        </div>
+
+        <i class="material-icons">more_vert</i>
+
+    </nav>
+    -->
+
+			{% block body %}
 
       {% endblock %}
 </body>

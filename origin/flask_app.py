@@ -91,7 +91,7 @@ def main_route():
                 for i in range(0, g):
                     restroom.append(v[i]["name"])
                     restroom_url.append(v[i]["url"])
-                    restroom_image.append(v[i]["image_url"])
+                    restroom_image.append(v[i]["image_url"]) 
                     restroom_review.append(v[i]["review_count"])
                     restroom_rating.append(v[i]["rating"])
                     restroom_address.append(v[i]["location"]["address1"])
