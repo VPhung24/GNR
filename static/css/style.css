@@ -1,0 +1,32 @@
+resize {
+ width:50%;
+ height:50%;
+}
+html {
+  position: relative;
+  min-height: 100%;
+}
+table, th, td {
+  border-collapse:collapse;
+  height: 20;
+}
+body {
+  height: 100%;
+  font-family:'Exo 2', sans-serif;
+  background: linear-gradient(#F5B7B1, #D2B4DE, #AED6F1, #A2D9CE, #ABEBC6, #FAD7A0, #EDBB99); /* Standard syntax (must be last) */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 90%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  line-height: 60px; /* Vertically center the text there */
+}
+
+.w3-card,.w3-card-2{box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)}
+
+.w3-card-4,.w3-hover-shadow:hover{box-shadow:0 4px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.19)}
+
+@media (min-width:768px){.card-deck{display:-ms-flexbox;display:flex;-ms-flex-flow:row wrap;flex-flow:row wrap;margin-right:-15px;margin-left:-15px}.card-deck .card{display:-ms-flexbox;display:flex;-ms-flex:1 0 0%;flex:1 0 0%;-ms-flex-direction:column;flex-direction:column;margin-right:15px;margin-left:15px}}

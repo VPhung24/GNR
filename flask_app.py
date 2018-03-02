@@ -6,8 +6,6 @@ import yelp_f
 import config
 from http import *
 from uszipcode import ZipcodeSearchEngine
-# from raven.contrib.flask import Sentry
-# sentry = Sentry(app, dsn='https://26f3e93f0a6e4c4b960aa24aa4f2e044:10c7768c450942bf90846d6d2ecd6ae3@sentry.io/225580')
 
 app = Flask(__name__, template_folder='templates')
 app.config["DEBUG"] = True
@@ -15,42 +13,6 @@ app.config["DEBUG"] = True
 @app.route("/", methods=["GET","POST"])
 def main_route():
     if request.method == "POST":
-        # if (request.form['zip_code']):
-        #     if (request.form['zip_code'] == 94502):
-        #         found = False
-        #         great = 94502
-        #         return render_template("index.html", great = great, found = found)
-        #     elif (request.form['zip_code'] == 94501):
-        #         found = False
-        #         great = 94501
-        #         return render_template("index.html", great = great, found = found)
-        #     elif (request.form['zip_code'] == 94545):
-        #         found = False
-        #         great = 94545
-        #         return render_template("index.html", great = great, found = found)
-        #     else:
-        #         found = False
-        #         great = False
-        #         error = "This is an error please try again. (It would also be helpful to email: vivianphung@outlook.com"
-        #         return render_template("index.html", error = error, found = found, great = great)
-        # elif (request.form['type_of_place']):
-        #     if (request.form['type_of_place'] == "Sushi"):
-        #         found = False
-        #         great = 94502
-        #         return render_template("index.html", great = great, found = found)
-        #     elif (request.form['type_of_place'] == "Steak"):
-        #         found = False
-        #         great = 94501
-        #         return render_template("index.html", great = great, found = found)
-        #     elif (request.form['type_of_place'] == "Burrito"):
-        #         found = False
-        #         great = 94545
-        #         return render_template("index.html", great = great, found = found)
-        #     else:
-        #         found = False
-        #         great = False
-        #         error = "This is an error please try again. (It would also be helpful to email: vivianphung@outlook.com"
-        #         return render_template("index.html", error = error, found = found, great = great)
         location_user = request.form['location']
         type_user = request.form['type']
         search = ZipcodeSearchEngine()
@@ -140,6 +102,10 @@ def main_route():
 
 app.secret_key = 'GNR for life'
 
+@app.route("/about/")
+def about_route():
+    return render_template('about.html')
+
 @app.errorhandler(404)
 def page_not_found(e):
     options = {
@@ -150,7 +116,7 @@ def page_not_found(e):
 @app.errorhandler(405)
 def method_not_found(e):
     options = {
-        "edit": False
+    "edit": False
     }
     return render_template("405.html" , **options)
 
@@ -160,6 +126,7 @@ def slashboard():
         return render_template("index.html")
     except Exception as e:
         return render_template("500.html", error = e)
+
 if __name__ == '__main__':
     # listen on external IPs
     app.run(host=config.env['host'], port=config.env['port'], debug=True)

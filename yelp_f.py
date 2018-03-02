@@ -41,9 +41,6 @@ def request(host, path, api_key, url_params=None):
     headers = {
         'Authorization': 'Bearer %s' % api_key,
     }
-
-    # print(u'Querying {0} ...'.format(url))
-
     response = requests.request('GET', url, headers=headers, params=url_params)
 
     return response.json()
@@ -71,8 +68,6 @@ def query_api(term, location):
     response = search(API_KEY, term, location)
     
     return response
-    # print(u'Result for business "{0}" found:'.format(business_id))
-    # pprint.pprint(response, indent=2)
 
 def main():
     parser = argparse.ArgumentParser()
@@ -95,6 +90,3 @@ def main():
                 error.read(),
             )
         )
-
-# if __name__ == '__main__':
-#     main()
