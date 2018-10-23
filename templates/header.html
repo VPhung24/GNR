@@ -20,7 +20,16 @@
     <!-- Google Material Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- GNR StyleSheet -->
-    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">   
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120510002-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-120510002-1');
+    </script>
 
     <title>
         GNR: Restrooms For All
@@ -45,9 +54,7 @@
         </ul>
     </div>
 
-    <button class="btn btn-link material-icons" type="button" style="color: inherit; text-decoration: none;" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-        more_vert
-    </button>
+    <a href="http://restroom.network/about" style="text-decoration : none;"><i class="material-icons">more_vert</i></a>
 </nav>
 </div>
 
