@@ -14,7 +14,7 @@ PyMySQL==0.7.1
 PySocks==1.6.7
 python-http-client==3.0.0
 pytz==2017.2
-requests==2.18.2
+requests>=2.20.0
 sendgrid==4.2.0
 sendgrid-python==0.1.1
 six==1.10.0
