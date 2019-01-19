@@ -1,6 +1,6 @@
 # GNR_test
 
-Find Gender Neutral Restrooms at restroom.network [this is the test site]
+Find Gender Neutral Restrooms at restroom.network
 
 Used Python, Flask, Yelp Fusion (API), CSS, HTML, Bootstrap
 
